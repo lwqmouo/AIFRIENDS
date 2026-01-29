@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ===== 默认：浅色主题 ===== */
+:root {
+  --brand-orange: #EA580C; /* 深橙 */
+  --brand-blue:   #1D4ED8; /* 深蓝 */
+}
+
+/* ===== 深色主题 ===== */
+[data-theme="dark"] {
+  --brand-orange: #FB923C; /* 亮橙 */
+  --brand-blue:   #3B82F6; /* 亮蓝 */
+}
+
