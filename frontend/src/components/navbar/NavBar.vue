@@ -18,7 +18,7 @@ import SearchIcon from "@/components/navbar/icon/SearchIcon.vue";
         </label>
         <div class="px-0 font-bold text-xl">AI Friends</div>
       </div>
-      <div class="navbar-center w-3/4 max-w-150">
+      <div class="navbar-center w-3/4 max-w-150 flex justify-center">
         <div class="join w-3/4">
           <input class="input join-item rounded-l-full w-3/4" placeholder="Search For Friends" />
           <button class="btn join-item rounded-r-full gap-1">
