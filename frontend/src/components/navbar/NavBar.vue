@@ -28,41 +28,37 @@ import SearchIcon from "@/components/navbar/icon/SearchIcon.vue";
         </div>
       </div>
       <div class="navbar-end">
-        <button class="btn btn-ghost mr-15 text-l">Log In </button>
+        <RouterLink :to="{name:'user-account-login-index'}" active-class="btn-active" class="btn btn-ghost mr-15 text-l">
+          Log In
+        </RouterLink>
       </div>
     </nav>
     <!-- Page content here -->
-    <div class="p-4">Page Content</div>
+    <slot>  </slot>
   </div>
 
   <div class="drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-64">
-      <!-- Sidebar content here -->
       <ul class="menu w-full grow">
-        <!-- List item -->
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
-            <!-- Home icon -->
+          <RouterLink :to="{name:'homepage-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
             <HomepageIcon class="w-7 h-7" />
             <span class="is-drawer-close:hidden text-base ml-2 mt-1">Homepage</span>
-          </button>
+          </RouterLink>
         </li>
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="好友">
-            <!-- Home icon -->
+          <RouterLink :to="{name:'friend-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="好友">
             <FriendIcon class="w-7 h-7" />
             <span class="is-drawer-close:hidden text-base ml-2 mt-1">Friends</span>
-          </button>
+          </RouterLink>
         </li>
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="创作">
-            <!-- Home icon -->
+          <RouterLink :to="{name:'create-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="创作">
             <CreateIcon class="w-7 h-7" />
             <span class="is-drawer-close:hidden text-base ml-2 mt-1">Create</span>
-          </button>
+          </RouterLink>
         </li>
-
       </ul>
     </div>
   </div>
